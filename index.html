@@ -1,361 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dr. [Your Name] — MindfulMD Coaching</title>
-  <meta name="description" content="Mindfulness coaching for clinicians and busy professionals led by Dr. [Your Name], MD — evidence-informed, practical tools to reduce burnout, improve focus, and restore balance." />
-  <meta name="author" content="Dr. [Your Name]" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#ffffff; --muted:#6b7280; --accent:#0f766e; --accent-2:#06b6d4;
-      --card:#f8fafc; --radius:12px; --maxw:1100px; --gap:20px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color-scheme: light;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
-    .container{max-width:var(--maxw);margin:0 auto;padding:40px 20px}
-    header{position:sticky;top:0;background:rgba(255,255,255,0.85);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid #eee;z-index:30}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--maxw);margin:0 auto;padding:10px 20px}
-    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
-    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
-    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600}
-    .cta{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
-    main{padding:30px 0}
-    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:40px 0}
-    .hero-grid{display:grid;grid-template-columns:1fr;gap:20px}
-    .hero h1{font-size:30px;margin:0 0 8px}
-    .eyebrow{display:inline-block;background:#eef2f2;color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:700;margin-bottom:8px}
-    .lead{color:var(--muted);font-size:17px}
-    .buttons{display:flex;gap:12px;margin-top:18px}
-    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(12,12,13,0.04)}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .prog{padding:18px;background:white;border-radius:12px;border:1px solid #f0f3f3}
-    .prog h4{margin:0 0 8px}
-    .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .faq{background:#fff;padding:18px;border-radius:12px;border:1px solid #f0f3f3}
-    footer{padding:40px 20px;margin-top:30px;border-top:1px solid #eee;background:linear-gradient(180deg,#ffffff, #fbffff)}
-    .testimonial{background:linear-gradient(180deg,#f8fffd,#ffffff);padding:16px;border-radius:12px;border:1px solid #e6f6f4}
-    form input, form textarea{width:100%;padding:10px;border:1px solid #e6e9ee;border-radius:8px}
-    .muted{color:var(--muted)}
-    @media(min-width:900px){
-      .hero-grid{grid-template-columns:1fr 420px;align-items:center}
-      .hero h1{font-size:38px}
-    }
-    /* small nav */
-    .mobile-toggle{display:none}
-    @media(max-width:800px){
-      nav ul{display:none}
-      .mobile-toggle{display:block}
-    }
-  </style>
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "name":"Dr. [Your Name] - MindfulMD Coaching",
-    "image":"https://example.com/your-photo.jpg",
-    "description":"Mindfulness coaching for clinicians and busy professionals. Led by Dr. [Your Name], MD. Evidence-informed practices to reduce burnout, improve focus, and cultivate calm.",
-    "telephone":"[YOUR PHONE]",
-    "url":"https://example.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "[City]",
-      "addressRegion": "[State]"
-    },
-    "sameAs": []
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Dew MD | Mindfulness & Meditation Coach</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header role="banner">
-  <div class="nav" role="navigation" aria-label="Main">
-    <a class="brand" href="#">
-      <div class="logo" aria-hidden="true">MD</div>
-      <div>
-        <div style="font-weight:700">Dr. [Your Name], MD</div>
-        <div style="font-size:12px;color:var(--muted)">Mindfulness & Resilience Coaching</div>
-      </div>
-    </a>
-
-    <nav>
-      <button class="mobile-toggle" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">☰</button>
-      <ul id="menu" role="menubar">
-        <li role="none"><a role="menuitem" href="#programs">Programs</a></li>
-        <li role="none"><a role="menuitem" href="#how">How it works</a></li>
-        <li role="none"><a role="menuitem" href="#testimonials">Testimonials</a></li>
-        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div style="display:flex;gap:10px;align-items:center">
-      <a class="muted" href="mailto:hello@example.com">hello@example.com</a>
-      <a class="cta" href="#booking">Book a consult</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="container hero" aria-labelledby="hero-title">
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow">Physician-led • Evidence-informed</span>
-        <h1 id="hero-title">Mindfulness coaching for clinicians & busy professionals</h1>
-        <p class="lead">I'm Dr. [Your Name], MD — I combine clinical experience with practical mindfulness training to help physicians, healthcare teams, and other high-pressure professionals reduce burnout, regain focus, and improve wellbeing — without adding to your to-do list.</p>
-
-        <div class="buttons">
-          <a class="cta" href="#booking">Free 20-min consult</a>
-          <a href="#programs" style="padding:10px 14px;border-radius:10px;border:1px solid #e6f6f4;background:white;font-weight:700;text-decoration:none;color:var(--accent)">View programs</a>
+    <header>
+        <div class="container">
+            <h1>Laura Dew MD</h1>
+            <p>Mindfulness & Meditation Coach | Houston, TX</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
+    </header>
 
-        <div style="margin-top:18px" class="muted">
-          <strong>Formats:</strong> 1:1 coaching • Group programs for clinics • Lunch & learn workshops
-        </div>
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>
+            I am Dr. Laura Dew, a physician and mindfulness & meditation coach based in Houston, Texas.
+            After years of witnessing the effects of stress on both patients and colleagues, I became passionate
+            about teaching practical tools that create calm, clarity, and resilience. My coaching blends 
+            evidence-based mindfulness practices with a compassionate, accessible approach designed to support 
+            busy professionals, caregivers, and anyone seeking greater balance in their lives.
+        </p>
+    </section>
 
-      </div>
-
-      <aside class="card" aria-label="Quick details">
-        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Calm mindful scene" style="width:100%;border-radius:8px;margin-bottom:12px;object-fit:cover">
-        <div style="font-weight:700">Current availability</div>
-        <div class="muted" style="margin:8px 0 12px">New client consults available — limited monthly spots.</div>
-        <a class="cta" href="#booking">Schedule a free consult</a>
-        <div style="margin-top:12px;font-size:13px" class="muted">Insurance: coaching services are private-pay. Not a replacement for medical care.</div>
-      </aside>
-
-    </div>
-  </section>
-
-  <section id="about" class="container" aria-labelledby="about-title" style="padding-top:8px">
-    <h2 id="about-title">About Dr. [Your Name]</h2>
-    <div class="grid-2" style="margin-top:12px">
-      <div class="card">
-        <p style="margin-top:0"><strong>Background</strong></p>
-        <p class="muted">Board-certified physician, [specialty]. Trained in mindfulness-based stress reduction (MBSR) and integrative medicine. 10+ years clinical practice and a decade coaching clinicians and teams.</p>
-        <p style="margin:12px 0 0"><strong>Approach</strong></p>
-        <p class="muted">Practical, science-backed mindfulness practices adapted for clinicians: short, scalable practices that fit into busy schedules. Emphasis on habit formation, attention training, and stress physiology.</p>
-      </div>
-
-      <div class="card">
-        <p style="margin-top:0"><strong>Credentials & affiliations</strong></p>
-        <ul class="muted" style="margin:8px 0 0;padding-left:18px">
-          <li>MD, [Medical School]</li>
-          <li>Board-certified in [Specialty]</li>
-          <li>Trained in MBSR / Mindfulness teacher training</li>
-          <li>Faculty — [Hospital / Institution] (optional)</li>
+    <section id="programs" class="container">
+        <h2>Coaching Programs</h2>
+        <ul>
+            <li><strong>1:1 Mindfulness Coaching:</strong> Personalized sessions designed to support stress reduction, clarity, and emotional balance.</li>
+            <li><strong>Meditation Training:</strong> Learn practical techniques you can use daily, even with a busy schedule.</li>
+            <li><strong>Workshops & Group Sessions:</strong> Tailored sessions for professionals, healthcare teams, and organizations.</li>
         </ul>
-        <p style="margin-top:12px;font-size:14px" class="muted"><strong>Ethics:</strong> coaching is confidential; clinical care for medical conditions should be done by your treating physician. I do not provide urgent medical care via this service.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="programs" class="container" aria-labelledby="programs-title" style="padding-top:8px">
-    <h2 id="programs-title">Programs & offerings</h2>
-    <p class="muted" style="margin-top:8px">Choose a format that fits your schedule and goals. Custom packages available for teams and departments.</p>
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:LauraTheMindfulDoc@gmail.com">LauraTheMindfulDoc@gmail.com</a></p>
 
-    <div class="programs" style="margin-top:14px">
-      <article class="prog" aria-labelledby="prog1">
-        <h4 id="prog1">Foundations: 6-week individual coaching</h4>
-        <p class="muted">Weekly 45-minute 1:1 sessions + short daily practices. Ideal to build a sustainable habit and reduce stress reactivity.</p>
-        <p style="margin-top:8px;font-weight:700">Price: $900 (6 weeks)</p>
-      </article>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
 
-      <article class="prog" aria-labelledby="prog2">
-        <h4 id="prog2">Clinician Recharge: Group program (8 weeks)</h4>
-        <p class="muted">Small cohort (8–12 clinicians). Weekly 60-min sessions, guided practices, peer discussion, and micro-habits for long-term resilience.</p>
-        <p style="margin-top:8px;font-weight:700">Price: $350 per participant</p>
-      </article>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
 
-      <article class="prog" aria-labelledby="prog3">
-        <h4 id="prog3">Rapid Reset: 4-session intensive</h4>
-        <p class="muted">Short, focused program for teams under pressure — practical tools to calm the nervous system quickly and restore focus.</p>
-        <p style="margin-top:8px;font-weight:700">Price: $450</p>
-      </article>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
 
-      <article class="prog" aria-labelledby="prog4">
-        <h4 id="prog4">Workshop: Lunch & Learn / Grand Rounds</h4>
-        <p class="muted">60–90 minute evidence-based talks with guided practices and implementation tips for clinicians and staff.</p>
-        <p style="margin-top:8px;font-weight:700">Custom pricing</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="how" class="container" aria-labelledby="how-title" style="padding-top:8px">
-    <h2 id="how-title">How it works</h2>
-    <div class="how" style="margin-top:12px">
-      <div class="card">
-        <h4>1. Free 20-minute consult</h4>
-        <p class="muted">We clarify goals and pick the right program.</p>
-      </div>
-      <div class="card">
-        <h4>2. Simple, habit-based practices</h4>
-        <p class="muted">Short daily practices (2–12 minutes) that research shows are effective when done consistently.</p>
-      </div>
-      <div class="card">
-        <h4>3. Real-world integration</h4>
-        <p class="muted">Tools designed for shift work, rounds, and family life — not just meditation cushions.</p>
-      </div>
-      <div class="card">
-        <h4>4. Ongoing support</h4>
-        <p class="muted">Text/email check-ins and optional booster sessions to keep progress steady.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="testimonials" class="container" aria-labelledby="testimonials-title" style="padding-top:8px">
-    <h2 id="testimonials-title">What clients say</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px">
-      <blockquote class="testimonial">
-        <p style="margin:0"><strong>"Dr. [Your Name]'s program helped me sleep again and stay calmer on busy shifts."</strong></p>
-        <p class="muted" style="margin-top:8px">— A. Johnson, Emergency Medicine</p>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p style="margin:0"><strong>"Practical, short practices I could actually use between patients."</strong></p>
-        <p class="muted" style="margin-top:8px">— L. Chen, Pediatrics</p>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p style="margin:0"><strong>"Our department's burnout scores improved after the group program."</strong></p>
-        <p class="muted" style="margin-top:8px">— Dept. Admin, [Hospital]</p>
-      </blockquote>
-    </div>
-    <p class="muted" style="margin-top:12px">Want to share feedback? Email <a href="mailto:hello@example.com">hello@example.com</a> — I may add anonymized testimonials to the site with permission.</p>
-  </section>
-
-  <section id="faq" class="container" aria-labelledby="faq-title" style="padding-top:8px">
-    <h2 id="faq-title">Frequently asked questions</h2>
-    <div style="display:grid;gap:12px;margin-top:12px">
-      <div class="faq">
-        <strong>Is this therapy?</strong>
-        <p class="muted">No — this is coaching and skill training led by a physician. It is not psychotherapy. If you have a mental health condition, please consult a licensed clinician. Coaching is confidential but not a substitute for urgent medical care.</p>
-      </div>
-
-      <div class="faq">
-        <strong>Do you accept insurance?</strong>
-        <p class="muted">Coaching services are private-pay. Some employers provide wellness reimbursement — I can provide receipts for those programs.</p>
-      </div>
-
-      <div class="faq">
-        <strong>Do you work with teams?</strong>
-        <p class="muted">Yes — I design custom group programs and workshops for departments and clinics. Contact me for a proposal.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="blog" class="container" aria-labelledby="blog-title" style="padding-top:8px">
-    <h2 id="blog-title">Sample resource</h2>
-    <article class="card" style="margin-top:12px">
-      <h3>3 practical mindful moments to use between patients</h3>
-      <p class="muted" style="margin-top:8px">Short practices you can do in under 90 seconds to reset attention and reduce stress reactivity. (Sample blog article — replace with your content.)</p>
-      <a href="#" class="muted" style="display:inline-block;margin-top:12px">Read more →</a>
-    </article>
-  </section>
-
-  <section id="contact" class="container" aria-labelledby="contact-title" style="padding-top:8px">
-    <h2 id="contact-title">Contact & booking</h2>
-    <div class="grid-2" style="margin-top:12px">
-      <div class="card">
-        <h4 id="booking">Book a free consult</h4>
-        <p class="muted">Schedule a 20-minute consult to discuss goals and the best program. Click below to book.</p>
-        <!-- Replace the href with your Calendly / booking link -->
-        <a class="cta" href="https://calendly.com/your-link" target="_blank" rel="noopener">Schedule on Calendly</a>
-
-        <div style="margin-top:12px" class="muted">
-          Or email: <a href="mailto:hello@example.com">hello@example.com</a><br>
-          Phone: <a href="tel:+11234567890">+1 (123) 456-7890</a>
-        </div>
-      </div>
-
-      <div class="card" aria-label="Contact form">
-        <form id="contactForm" onsubmit="return submitForm(event)">
-          <label for="name" class="muted">Name</label>
-          <input id="name" name="name" required placeholder="Your name">
-
-          <label for="email" class="muted" style="margin-top:8px;display:block">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@domain.com">
-
-          <label for="message" class="muted" style="margin-top:8px;display:block">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell me briefly what you're hoping for..." required></textarea>
-
-          <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
-            <button class="cta" type="submit">Send message</button>
-            <div class="muted" style="font-size:13px">I'll reply within 2–3 business days.</div>
-          </div>
+            <button type="submit">Send</button>
         </form>
-        <div id="formNote" style="display:none;margin-top:12px" class="muted"></div>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer role="contentinfo">
-  <div class="container" style="display:flex;flex-direction:column;gap:10px">
-    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
-      <div>
-        <strong>Dr. [Your Name], MD</strong><br>
-        Mindfulness & Resilience Coaching — [City, State]
-      </div>
-      <div class="muted">
-        <a href="#privacy" class="muted">Privacy</a> • <a href="#terms" class="muted">Terms</a>
-      </div>
-    </div>
-
-    <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-      <div class="muted">© <span id="year"></span> Dr. [Your Name]. All rights reserved.</div>
-      <div class="muted">Designed for clinicians • Not a substitute for medical care</div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // small helpers
-  function toggleMenu(btn){
-    const menu = document.getElementById('menu');
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!expanded));
-    menu.style.display = expanded ? 'none' : 'block';
-  }
-
-  // smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      const target = a.getAttribute('href').slice(1);
-      if(!target) return;
-      const el = document.getElementById(target);
-      if(el){
-        e.preventDefault();
-        el.scrollIntoView({behavior:'smooth',block:'start'});
-      }
-    });
-  });
-
-  // form handler (simple)
-  function submitForm(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    // Example client-side validation
-    if(!name||!email||!message){
-      alert('Please complete the form.');
-      return false;
-    }
-    // Replace with real submission: fetch to your server or third-party form endpoint.
-    // For now we'll create a mailto link as a fallback.
-    const mailto = `mailto:hello@example.com?subject=${encodeURIComponent('New coaching inquiry from '+name)}&body=${encodeURIComponent(message + '\\n\\nContact: ' + email)}`;
-    document.getElementById('formNote').style.display='block';
-    document.getElementById('formNote').innerText = 'This demo opens your email client to send the message. Replace this with a secure form handler in production.';
-    window.location.href = mailto;
-    return false;
-  }
-
-  // small dynamic bits
-  document.getElementById('year').innerText = new Date().getFullYear();
-</script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Laura Dew MD | Mindfulness and Meditation Coach | Houston, TX</p>
+        </div>
+    </footer>
 </body>
 </html>
